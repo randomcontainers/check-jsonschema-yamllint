@@ -1,0 +1,5 @@
+# Generated from the combos section of randomcontainers/check-jsonschema package.yml by randomcontainers/ci.
+# Do not edit; change package.yml in randomcontainers/check-jsonschema instead.
+name: check-jsonschema-yamllint
+owner: check-jsonschema
+with: [yamllint]
