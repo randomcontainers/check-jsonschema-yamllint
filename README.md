@@ -58,7 +58,7 @@ gh attestation verify oci://ghcr.io/randomcontainers/check-jsonschema-yamllint:l
   --repo randomcontainers/check-jsonschema-yamllint --signer-repo randomcontainers/ci
 ```
 
-Each image also has a keyless cosign signature from the same workflow, for admission controllers that check cosign signatures:
+Images published since November 2026 also have a keyless cosign signature from the same workflow, for admission controllers that check cosign signatures. Tags last built before then have only the attestation.
 
 ```sh
 cosign verify ghcr.io/randomcontainers/check-jsonschema-yamllint:latest \
@@ -67,7 +67,7 @@ cosign verify ghcr.io/randomcontainers/check-jsonschema-yamllint:latest \
   --certificate-github-workflow-repository randomcontainers/check-jsonschema-yamllint
 ```
 
-Images from `ghcr.io/randomcontainers/check-jsonschema` are built in [randomcontainers/check-jsonschema](https://github.com/randomcontainers/check-jsonschema), so name that repository in `--repo` and `--certificate-github-workflow-repository`.
+Images from `ghcr.io/randomcontainers/check-jsonschema` are built in [randomcontainers/check-jsonschema](https://github.com/randomcontainers/check-jsonschema), so use `randomcontainers/check-jsonschema` in `--repo` and `--certificate-github-workflow-repository`.
 
 ## Updates
 
